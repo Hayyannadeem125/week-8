@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    passwordHash: {
+    password: {
         type: String,
         required: true,
     },
@@ -24,20 +24,20 @@ const userSchema = new mongoose.Schema({
     phone: {
         type: String
     },
-    address: {
-        street: String,
-        city: String,
-        state: String,
-        zipCode: String,
-        country: String,
-    },
+    // address: {
+    //     street: String,
+    //     city: String,
+    //     state: String,
+    //     zipCode: String,
+    //     country: String,
+    // },
+    // image:{
+    // type: String,
+    // },
     role: {
         type: String,
         enum: ["customer", "admin"],
         default: "customer"
-    },
-    createdAt: { type: Date,
-        default: Date.now
     },
 });
 
